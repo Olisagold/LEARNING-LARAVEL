@@ -2,5 +2,8 @@
   <x-slot:heading>
     HOME PAGE
   </x-slot:heading>
-  <h1>HELLO FROM THE HOME PAGE</h1>
+  @foreach($jobs as $job)
+    <li><strong>{{$job['title']}}</strong>: Pays {{$job['salary']}} per year</li>
+  
+  @endforeach
 </x-layout>
